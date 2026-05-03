@@ -1,27 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GEOG:3540 Matthew Schmalz</title>
+    <title>GEOG:3540 | Matthew Schmalz</title>
     <style>
         body {
+            margin: 0;
             font-family: Futura PT, sans-serif;
-            text-align: center;
-            margin-top: 50px;
+            background: #f5f5f5;
         }
-        img {
-            max-width: 600px;
+
+        /* Portfolio Banner */
+        nav {
+            background: #222;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Flex helpers for centering */
+        .nav-section {
+            flex: 1;
+            display: flex;
+        }
+        .nav-center {
+            justify-content: center;
+        }
+        .nav-right {
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Panels */
+        .panel {
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 1px solid #ddd;
+            background: white;
+        }
+
+        .panel img {
+            max-width: 900px;
+            width: 90%;
             border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            margin-top: 0;
         }
     </style>
 </head>
 <body>
 
-    <h1>GEOG:3540 Matthew Schmalz</h1>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-section">
+            <a href="about.html"><strong>Matthew Schmalz</strong></a>
+        </div>
+        <div class="nav-section nav-center">
+            <a href="index.html">Portfolio</a>
+        </div>
+        <div class="nav-section nav-right">
+            <a href="resume.pdf" target="_blank">Resume / CV</a>
+        </div>
+    </nav>
 
-    <img src="chart.png" alt="Sample Image">
+    <div class="panel">
+        <h2><a href="https://observablehq.com/d/789933363abc2c91">Choropleth Map</a></h2>
+        <img src="choropleth.png" alt="Choropleth Map">
+        <p>This is a basic choropleth map that represents house vacancy percentage by US state. It uses data from the 1990 US Census. It utilizes manual classification along with 5 classes.</p>
+    </div>
 
-    <p>This is a map or something.</p>
+    <div class="panel">
+        <h2><a href="https://observablehq.com/d/a8aef1f3588c8641">Proportional Symbols Map</a></h2>
+        <img src="proportionalSymbols.png" alt="Proportional Symbols Map">
+        <p>This is a proportional symbol map focused on US geothermal power plant capacity in megawatts (MW). It utilizes data from the Energy Information Administration (EIA).</p>
+    </div>
+
+    <div class="panel">
+        <h2><a href="https://observablehq.com/@caglarkoylu/isarithmic-mapping-geog-3540">Isarithmic Map</a></h2>
+        <img src="isarithmic.png" alt="Isarithmic Map">
+        <p>This is an isarithmic map that represents the yearly total precipitation of Iowa in inches. It was created by Caglar Koylu.</p>
+    </div>
+
+    <div class="panel">
+        <h2><a href="https://observablehq.com/d/2d4fb5b411eeeca6">Bivariate Map</a></h2>
+        <img src="bivariate.png" alt="Bivariate Map">
+        <p>This is a bivariate choropleth map the represents median household income along with percentage of military service members by census tracts in eastern Virginia. It utilizes data from the US Census 2023 American Community Survey.</p>
+    </div>
+
+    <div class="panel">
+        <h2><a href="flowmap.html">Flow Map</a></h2>
+        <img src="flowmap.png" alt="Flow Map">
+        <p>This is a flow map representing the trade of natural gas in Europe.</p>
+    </div>
 
 </body>
 </html>
